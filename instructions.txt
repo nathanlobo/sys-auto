@@ -1,0 +1,32 @@
+For ig_following script
+to check whether code ended or completed with 'user' error
+check whether 'user' repeated 5 times n also check gui.immage of run button to know if running completed
+
+sample output 
+fatal: destination path 'vhub-scripts' already exists and is not an empty directory.
+imported
+
+fetching ids
+50  ids ready to be scraped
+45783707 1
+642828036 2
+58144424347 3
+5691592482 4
+error  2132258641 'users'
+error  1456950806 'users'
+error  9292872246 'users'
+error  45274070380 'users'
+error  58107487742 'users'
+error  64415132616 'users'
+profiles_pushed 4
+rows_pushed 2746
+
+
+
+
+
+
+Help us confirm it's you
+We've noticed unusual activity from your account and have temporarily restricted certain actions.
+Follow the next steps to help us remove the restrictions on your account.
+
