@@ -39,40 +39,22 @@ def write_text_to_file(text, file_path='temp.txt'):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def clickArea(images, waitTimeOut=None):
-    toFindCount = len(images)
-    # print(f'To Find Count {toFindCount}')
-    notFound = 0
-    i = 0
-    timeWaited = 0.0
-    while True:
-        try:
-            button_location = gui.locateOnScreen(images[i])
-            # Note that button shade is diff, when login details enter compared to not enter
-            if button_location: 
-                gui.click(button_location)
-                break
-        except gui.ImageNotFoundException:
-            # print('Not Found Increamented')
-            notFound+=1
-            # print(notFound)
-            if toFindCount > 1 and i < (toFindCount-1):
-                # print('i increamented')
+def clickArea(images, Timeout):
+    callTime = time.time()
+    while (callTime-time.time()) <= Timeout:
+        i=0
+        for image in images:
+            try:
+                button_location = gui.locateOnScreen(images[i])
+                # Note that button shade is diff, when login details enter compared to not enter
+                if button_location:
+                    gui.click(button_location)
+                    return
+            except gui.ImageNotFoundException:
                 i+=1
-                # print(i)
-            if notFound >= toFindCount:
-                if waitTimeOut:
-                    notFound = 0
-                    if timeWaited >= waitTimeOut:
-                        break
-                    gui.sleep(.5)
-                    timeWaited+=.5
-                else:
-                    raise ImageNotFound('Image not found to Locate on Screen')
-                    break
 
 def goTobrowser():
-    clickArea([r'images\browser_icon.png']) #click on browser
+    gui.click(605,745)
     gui.sleep(1)
 
 def getSessionId():
@@ -140,7 +122,6 @@ def dataPushedCount(file_path='textfile.txt'):
             return f"File '{file_path}' not found."
 
 def instaLogin(igId,igPw,Timeout=None):
-        gui.hotkey('ctrl', '2')
         gui.click(110,330)
         images = ['images\ig_user_id_box1.png','images\ig_user_id_box2.png'] # id input box imgs
         clickArea(images, waitTimeOut=Timeout) # this finds n clicks area that looks like the images given
@@ -157,13 +138,29 @@ def instaLogin(igId,igPw,Timeout=None):
         gui.write(igPw) # type insta user password
         gui.press('enter')
 
+def getIgStatus(Timeout):
+    # Checks insta status & returns (LoggedIn, LoggedOut, DismissWarning, CaptchaWarning, Loading)
+    try:
+        callTime = time.time()
+        while (callTime-time.time()) <= Timeout:
+            try:
+                if gui.locateOnScreen(r'images\ig_logo.png'):
+                    return 'Loading'
+            except gui.ImageNotFoundException:
+                if gui.locateOnScreen(r'images\login_btn.png'):
+                    return 'LoggedOut'
+            except gui.ImageNotFoundException:
+                    return 'LoggedIn'
+    except gui.ImageNotFoundException:
+            return 'CouldNotGetStatus: Hint-Increase Timeout'
+        
 def instaLogout(Timeout=None):
     gui.hotkey('ctrl', '2')
     try:
-        gui.locateOnScreen('images\ig_more2.png')
+        gui.locateOnScreen('images\ig_more2.png') # Checking for Bolded More Btn: 3 Bold lines-horizontal
     except gui.ImageNotFoundException:
-        print('Doing Except of logout')
-        clickArea(['images\ig_more1.png'], waitTimeOut=Timeout)
+        # print('Doing Except of logout')
+        clickArea(['images\ig_more1.png'], Timeout=Timeout)
         gui.moveTo(680,320) # move out of area (at centre) coz holding at same position highlights alt text 
     finally:
         clickArea(['images\ig_logout_btn.png'], waitTimeOut=(Timeout+5))
@@ -193,6 +190,10 @@ ig_ids_pws= [
 
 def main():
     goTobrowser()
+    gui.hotkey('ctrl', '2')
+    # gui.hotkey('ctrl', 'shift', 'r')
+    # gui.hotkey('ctrl', 'r')
+    print(getIgStatus(2))
     # instaLogin(igId,igPw)
     # dismissWarning()
     # sessionID = getSessionId()
@@ -232,13 +233,13 @@ def main():
     
     # else:
     #     print('Unknown Error Occured at Analyze')
-    print("Program ended")
+    print("\nProgram ended")
 
 if __name__ == "__main__":
     main()
-    # for id_pw in ig_ids_pws:
-    #     id = id_pw[0]
-    #     pw = id_pw[1]
-    #     print(f'id: {id}, pw: {pw}')
-    # checkText('temp.txt', ['shbid', 'csrftoken'])
+
+    import winsound
+    frequency = 1000
+    duration = 1500
+    winsound.Beep(frequency, duration)
     pass
