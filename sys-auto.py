@@ -50,8 +50,7 @@ t()
 # gui.hotkey('shift', 'f10') # Shift + F10 to right click
 # t()
 # gui.press("down",presses=2,interval=1)
-# playmp3("BEEP.mp3"dwhatsapp
-)
+# playmp3("BEEP.mp3"dwhatsapp)
 # gui.press("enter")
 # with open("msgs.txt", 'a') as f:
 #     f.write(f"\n{session_id}")
