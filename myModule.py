@@ -1,4 +1,4 @@
-def getScrapCount(file_path='temp.txt', search_texts = ['Users data_pushed', 'profiles_pushed']):
+def getScrapCount(search_texts, stats=True,file_path='temp.txt'):
     def calculate_list_stats(items):
         from collections import Counter
         if not items:
@@ -16,8 +16,8 @@ def getScrapCount(file_path='temp.txt', search_texts = ['Users data_pushed', 'pr
 
             return {
                 'sum': total_sum,
-                'list count': list_count,
-                'most common': most_common,
+                'list_count': list_count,
+                'most_common': most_common,
                 'max': max_item,
                 'min': min_item
             }
@@ -26,7 +26,7 @@ def getScrapCount(file_path='temp.txt', search_texts = ['Users data_pushed', 'pr
         except Exception as e:
             return f'Error: {e}'
 
-    def findText(search_text, file_path):
+    def findText(search_text):
         try:
             matched_lines = []
             with open(file_path, 'r') as file:
@@ -42,7 +42,8 @@ def getScrapCount(file_path='temp.txt', search_texts = ['Users data_pushed', 'pr
                     result = result + "+" + (str(line))
                 output = {}
                 output.update({'count':result})
-                output.update(calculate_list_stats(matched_lines))
+                if stats:
+                    output.update(calculate_list_stats(matched_lines))
                 return output
             else:
                 return "TextNotFound"
@@ -53,8 +54,10 @@ def getScrapCount(file_path='temp.txt', search_texts = ['Users data_pushed', 'pr
     
     result = []
     for search_text in search_texts:
-        result.append(findText(search_text, file_path))
+        result.append(findText(search_text))
     return result
+
+
 
 def analyze(file_path):
     def dataPushed(file_path):
