@@ -1,1012 +1,439 @@
 fatal: destination path 'vhub-scripts' already exists and is not an empty directory.
 imported
 
-fetching ids
-25  ids ready to be scraped
-2039575084
-1940526029
-55787273148
-7593334466
-4312548072
-64648479127 data too small
-55416198477 data too small
-27889496428
-4234215755 data too small
-357151654
-6875770652
-1634992760
-3402436768
-error  42313808709 'users'
-12766631187
-error  7435514449 Expecting value: line 1 column 1 (char 0)
-1341087247
-4265931247
-51418689409
-42650637810
-59640963326 data too small
-1985905630 data too small
-65736068106 data too small
-8397463228
-3983084627
-profiles_pushed 17
-fetching ids
-25  ids ready to be scraped
-1253374111 data too small
-7226654895
-2548871466
-47231175857
-3548406736
-53061828975
-8472758078
-2160219675
-3044416083
-26054375308
-44819045885
-1903421494
-46646769094 data too small
-7127668928
-45387437029
-57213179091 data too small
-63135681661 data too small
-6305393823
-28724982110 data too small
-8590433759
-2979868489
-58462459563
-11153968998 data too small
-4169171619
-189317387
-<Response [413]> storing it as csv file 
-FollowingTimeTaken: 11 
-
-
-fatal: destination path 'vhub-scripts' already exists and is not an empty directory.
-imported
-
-fetching ids
-25  ids ready to be scraped
-30194749706 data too small
-6979275090
-2039352631
-57566096926 data too small
-8597341963
-36089590444 data too small
-23585111
-287673497
-2603662697
-8282537332
-49586843685 data too small
-45332220615 data too small
-53178477671 data too small
-460368034
-3210895096
-44588076204
-2048136740
-17765545542
-40602944140
-60823545018 data too small
-1247943362
-50566207188
-497200147
-554595935
-2030365675 data too small
-profiles_pushed 17
-fetching ids
-25  ids ready to be scraped
-60551701077
-19783315443
-8127908913
-50909058249
-2242726505
-252418592
-1954897240
-16339307712
-1807945937
-5882989222
-17840447795
-1376606845
-5635817922
-9178221767
-38960017570
-1388137771 data too small
-2012856792
-2726905076
-3303027771
-8678326803
-3055066218
-195091543
-7400202902
-7839364946 data too small
-1282504891
-<Response [413]> storing it as csv file 
-FollowingTimeTaken: 10 
-
-
-fatal: destination path 'vhub-scripts' already exists and is not an empty directory.
-imported
-
-fetching ids
-25  ids ready to be scraped
-2239125446
-1608357410
-33603488104
-1186680082
-18657156140
-61217469053 data too small
-12496019947
-54539964623
-5487833289
-7438663581
-7446772903 data too small
-44106211838
-6432522754
-1823034957
-34100902236
-689421993
-3427729765
-56692251092 data too small
-5888547659
-8955421134 data too small
-27674452212 data too small
-2035026376
-6938354764
-24777564300
-44350085791
-profiles_pushed 20
-fetching ids
-25  ids ready to be scraped
-297616233
-1750635741
-907512325
-39236745112
-2263120711
-55681344379
-13476415569
-12271650130
-63644553341 data too small
-3961692594
-59902163202 data too small
-49556001916
-967391309
-8469393606
-17553751521
-18241743614 data too small
-7724418929
-1906141733
-27879124863
-3273322427
-8902445434
-45421131817
-8058992921
-18674406538 data too small
-190790791
-profiles_pushed 21
-fetching ids
-25  ids ready to be scraped
-288367577
-46738756871 data too small
-52805528590 data too small
-1501647243
-8016308488
-1724554247
-50215681134
-47204426060 data too small
-49736516491
-1419811094
-9035759019
-53147110662 data too small
-242887001
-1961720639
-2709411801
-9386018672
-51722707624
-60298954056
-6023185144 data too small
-48155254699 data too small
-177230613
-61365910576 data too small
-5795987358
-1696747617
-3226958645
-profiles_pushed 18
-fetching ids
-25  ids ready to be scraped
-4358187606 data too small
-47054584743 data too small
-1537246352
-18493119767
-2336720708
-49962840555 data too small
-60421372874 data too small
-8232788919
-359213288
-56266236740 data too small
-3966080322
-1123961720
-2313112003
-46602280625
-58334649627
-1814829682
-6283923115
-52038733829 data too small
-4255954354
-59432488780
-42822884596
-1417375217
-2413338624
-51194519228
-48741116095
-<Response [413]> storing it as csv file 
-FollowingTimeTaken: 22 
-
-
-fatal: destination path 'vhub-scripts' already exists and is not an empty directory.
-imported
-
-fetching ids
-0  ids ready to be scraped
-FollowingTimeTaken: 0 
+FollowingTimeTaken h_m_s: 0_0_0
 
 
 fetching user data
 25 ids ready to get scraped
-dimple.jk 2875755022 0
-natewolf__ 1256844145 0
-sofie_lidborn 1695869643 1000
-shiningbabybels 6822462339 0
+millenfarm 2239639792 0
+the_room_aesthetic 58227865645 10
+ryans_bar 548471072 0
+theindianvodka_  1000
+Expecting value: line 1 column 1 (char 0)
+vikrant_bikes 52761081346 0
+hammer_champ 8240496913 0
 'user'
-_tausif20 5838351629 5
-lady.claudiavalentin 443985633 0
+yashblogs 7520085261 0
 'user'
-artistrybynigin 711367191 0
-_abhiilaakhi_ 8019046859 0
-punyaab 44728079222 10
+animatedvish 11106872739 0
 'user'
-foodiemangalore 51013920398 0
-bronziocre 8442364548 0
+staci_travels 399277810 0
 'user'
-antonia.stogdale 1364849584 0
-cosiesthome 26749084584 19
-rincy.kitchen 44209518222 0
-sachin_thewarriorsquad 8037538027 0
-dipanshu.rawal 1562050338 0
-nataliereynolds 423401930 0
-oro24developments 49760684012 0
-curpop_ 243142197 0
-chucklles_merchandise 65941003229 0
-streetstorepatiala 48265071252 8
+mr.food_mrs.travel  1000
+'data'
+coco_nails_pune 14102705626 0
+ohanaliving 2214983297 0
+mrobaia 8409062882 0
 'user'
-mrskajal_official 9072374046 0
-tyohar.store 55635669748 0
-kaldybekov7 219923542 0
-maeggatron_ 377061081 0
+sandarnesorrento 600629746 0
+veganctuary 45396327861 0
 'user'
-Users data_pushed  19
+bz_timelesscharm 2273263307 1000
+'user'
+deekssha__shetty 3229273601 0
+tinasrituals 17575859204 0
+1ukebriggs 3015524472 0
+zoyaamakeupandhair  1000
+Expecting value: line 1 column 1 (char 0)
+andysoni79 642292977 0
+bansalmehak_84 45055748007 0
+dinnerwithl 63899856695 0
+wafax21 7717363096 0
+shinedotcom 776451415 0
+Users data_pushed  15
 25 ids ready to get scraped
-makeupbysharanshergill 54242074345 0
-humans_first_therapists 32543313959 0
-rudyspizzaleeds 13000454595 0
+mascavado.adl 14295195945 0
+tanyaluiz_ 627634446 5
 'user'
-wardrobe_refinery 10899870556 14
-'user'
-foodie_mom.and.kiyansh 39391375520 0
-gauuraw 4956321482 0
-hazelbeautyglam 2325263274 0
-'user'
-wanderlustinthewild 8294100362 0
-k_a_w_i_n.k_s_ 12066735608 0
-rc_machan_official 7593678073 0
-themelissashannon 43400431 0
-'user'
-anniemackinart 3647626605 0
-martinelliroma 4842511709 0
-'user'
-discovermeghalaya 3165551533 0
-kuchisrivardhani 50983853516 0
-maisabellaa 17768933 0
-sayitwithaselfiedubai 2031494505 0
-alinaahmaad 32469989317 0
-'user'
-deuve.classy 8531627293 0
-mr.chichi_ 4095363436 5
-thrift.nthrive 39717042333 13
-'user'
-wearemdls 296047141 0
-mrtruetales 23625109345 0
-reneetheo_x 3053505328 0
-thefinancecicerone 48038145904 0
-Users data_pushed  18
-25 ids ready to get scraped
-cookbook_89 48981577082 0
-clarion_medical 3843064339 0
-velujazz 2289958930 0
-lkrrr_ 46710920 0
-hiba_amaan 39187336601 0
-suvratkothari 606032770 0
-neelamrohera3 3017590578 0
-gauravtyagicoach 9036941538 0
-blackpearltim 7953902454 0
-lexi_smith__._ 8305846216 6
-'user'
-blackleaf_mcr 39864931306 0
-'user'
-silent_killer0518 40767639970 0
-windflowerresortandspa 5670977349 0
-emilys_letters 8509515473 0
-'user'
-leisure_eats 5016268314 0
-jewelleryworld_exhibitions 50933631336 1000
-gineshpd_hungrywolf 3406248766 0
-dreamycat_996 61118074483 0
-amitkhannaofficial_ 457268717 0
-dimasso.co 241057226 0
-bangkok_fashion_boutique 48577243985 0
-iamsamar.20 3265016569 0
-'user'
-_sonali_photography_ 8949420830 4
-'user'
-coffeeandhugsblog 8559219577 0
-kair_erasyl 1437074126 0
+kaysonindia 32307877950 0
+flowwithshreya  1000
+Expecting value: line 1 column 1 (char 0)
+ridahbadami 193471275 0
+lamborghinijo 217024126 0
+thefoodiegirlmumbai  1000
+Expecting value: line 1 column 1 (char 0)
+arnavfotos  1000
+Expecting value: line 1 column 1 (char 0)
+theaesthete_writer 9249537740 0
+stuti_sahijwani 28410659549 0
+yogi_hai_to_yakeen_hai_ 48067067648 0
+ferrismular 19218236 0
+anesthetised 464955156 0
+dancergyal_ 6550503 0
+sistergirlcollection 4027984016 0
+ameer_momz_ 4573808312 0
+kajal.chhasatiya?igsh=b3pwntkzmmxqnnbp  1000
+Expecting value: line 1 column 1 (char 0)
+subrosaliverpool 44706627275 0
+stufskin 12990663336 0
+melissagriffiths__ 276681753 0
+vine.creative.agency 11813835575 0
+sumangla.sharma 309252782 0
+itischantelle 57062049587 0
+feedmamafirst 23906364710 0
+irumsidd.makeupartistry 15375523296 0
 Users data_pushed  20
 25 ids ready to get scraped
-bottegaartisancoffee  1000
+eltopomexican 253778113 0
+florenzzjune 7932106261 0
+sayeearavinth 4354865601 0
+goldensheaf 286052308 0
+alexarafie 268007165 0
+truantalks 47458977886 0
+dannny__19 3550931971 0
+uprootedtraveler 12054873 0
+emmanuelkan 22910909 0
+rajputnidhiisingh  1000
 Expecting value: line 1 column 1 (char 0)
-cadnoida 57766884860 0
-shreyabhandarii 509557465 0
-chrisishirley 455056407 0
+anand_mani16 7043021993 0
+ellybuchi 10694840 0
+amykatemarshall 4138374609 0
+nancyy14__ 3319550457 0
+laurenellamacrae 34819694 0
+anuradha_paul_666 5461879877 0
+logoanimationinspiration 10370360932 58
 'user'
-thebongfoodies19 16187648138 0
-__the_savage_scorpion 7689168721 0
-morpunkhi 50328233409 4
+tgrace_mua 3582161509 0
+yourenglishfeed 48837691491 0
+glionmuseum 2152668469 0
+asmita_chanda26 1195509256 0
+thecda.co 59359584661 0
+ujsmakeover 45365107838 0
+rebeccaleann_ 269725463 0
+dannygarnellcomedy 1993799837 0
 'user'
-ankit.kalsi 210227775 0
-ag.signs 3578719264 0
-lngoldsaffron 36414267480 5
-'user'
-shalu.7040 4682874859 0
-thesautingveggie 38438199189 0
-a.n.s.h________ 3053135149 0
-vdshaaa 50545514583 0
-thooki_adichuruve_paathukoo 4291460775 0
-abylaikhan.sharatov 888602387 0
-marcanthonyindia 6676280058 1000
-'user'
-momwhatsfordinner 38096763 0
-the_alientribe 2880622925 0
-shrimpot_ 4988976803 0
-i_nivethathomas 1546623440 122
-aish56858 5717405234 44
-gluedtothepage 5398772344 0
-'user'
-__jimly_kakati__ 7475115003 0
-mara_reina 5074098 0
-'user'
-Users data_pushed  18
-25 ids ready to get scraped
-she.nd_luv 58149364879 0
-gayaki_priya 317570156 0
-gabriela_sophie2 44596726253 0
-'user'
-chikmagalurfood 36072370771 1000
-chaidays 8689564101 0
-itsniaakhurana  1000
-Expecting value: line 1 column 1 (char 0)
-whitesandinthesky 58420908500 0
-foodandlifeofmumbaikar 8543907576 1000
-soukalmarfa 45145542496 0
-biesan.abukwaik 20387545 0
-lexihope_ 200387128 0
-sridharbangalor 54263975388 0
-uniquepatiala 62746003188 8
-'user'
-makeoversbymalavika 8546187989 0
-nehakucheria 416870291 0
-goatechnolovers 45814011793 0
-nova_shades0 29151567941 0
-theyellowthreadandneedle 48914655077 0
-sayaaaanx 1755378658 0
-kayeandco.pret 59430342589 0
-agarwal.ishan.05 26486032049 0
-adonboudaher 310638008 0
-dailyworldexperience 65393068594 0
-blustreblustre 7021973183 0
-_drift1 1660472323 0
 Users data_pushed  22
 25 ids ready to get scraped
-refinedrevolution 31535675820 1000
-propuro.skincare 67229296362 0
-aashikaur1068 19527197057 0
-kangan_amritsar 3432215581 0
-curls.sky 11876752048 4
+truffledealer 1395785952 0
+mountains_yoga_me 5393918873 0
 'user'
-mysticsaravanan 560769748 0
-ohhellobusiness 38346769971 0
-liliuribesaltaren 1197409140 0
-soumyashettysomu23 14750439982 0
-art.givesyoulife 47862281068 1000
+threadsandtassels 4674107129 0
+celigrowsbusiness 248835368 0
+mrgaryfox 37570619 0
+nudebynaturenz 1945333619 0
 'user'
-anukajewelsvirokbytatiwalas  1000
-Expecting value: line 1 column 1 (char 0)
-__v_i_c_k_y_______ 3160371173 0
-_guru_kailash_ 2058337414 0
-mz.ridas 3615975798 0
-rossellafashions 8607672842 0
-_the_beauty_mansi_ 5871096755 0
+sequinsandbeads_byseasons 42262476990 0
+veraisonwineslondon 49926613258 0
+tatumhargraves 1383505667 0
+merialmariofficial 242001058 7
 'user'
-almanzel.alarabi 1559993377 0
-rushvasa 186064749 0
-johnsonxceo 271454126 0
+myvn.architecture 3554464346 4
 'user'
-kimmy_fernandez_24 7466728682 0
-the.financialgeek4 45893683101 0
-hamidreza_negari 7323215398 0
-fabshieldindia 12180798858 0
-english7099_ 33301769592 0
+brasilianblowdry 217952520 0
+nitumoni224 47570361353 0
+reallouisandre 51783844 0
+yasmina_3322 1824730362 0
+alayra.rehman 58052272533 0
+ideaforge_tech 10101435601 0
+chriysolinn 366810461 0
 'user'
-nifdglobal.jaipur 5376056900 0
-Users data_pushed  19
+emzac_ 9140519 0
+'user'
+fasateenii 237195812 0
+'user'
+stockonhand 1970499559 0
+archiigalleria 1723037991 1000
+'user'
+teethbylottie 7059822084 0
+'user'
+mel_coalriverfarm 9156245 0
+cyber.arpan 40885022440 9
+'user'
+Users data_pushed  15
 25 ids ready to get scraped
-sharvar_ieie 5338608929 0
-zukostylewithus 65348922093 4
+chefdavidkuo 51738810878 0
+theactorsvow 35591649710 0
+rhia.elise 7073770226 0
+saju_kashmir 48769632651 0
+alexs_abtig 5792021421 0
+charming_kavi_23 1390043096 0
+reve_patisserie 4096653671 0
+amy_sunshine 8348106 0
+winntfoodie 699084640 0
+rj_mark_vishnu 2323426935 0
+newfuturefolk 49727160 0
+_simply.sue_ 5009528086 0
+concordiastarmedaesthetics 4024829523 0
+cruisebarsydney 353549994 0
+zoey_thebeagirl 47645927538 0
+drdouaihy 4550581635 0
+alldaywithfaye 1717722704 0
+soham_chatterjee__ 7035028925 0
+muskan09 3236178617 0
+adka316 321846648 0
+core42ai 6203471377 0
+kssshop_official 8071571926 0
+bylindseyy 26152298 5
 'user'
-ijobanrandhawa 1648567931 0
+rashateghri_ 8983132536 0
+e.k_tutorials_ 36046836911 16
 'user'
-fame_art_feature 38533872874 0
-danhirschowitz 974490287 0
-raman_ielts_trainer  1000
-Expecting value: line 1 column 1 (char 0)
-dee.merci 49321134404 0
-nandini_p 334669752 0
-'user'
-letaous 1369113633 0
-manushi02_ 1645230114 0
-vijangaurav 3051154166 0
-nicoleperraultt 17859108 0
-'user'
-julesanatomy 174346145 0
-adammpaz  1000
-Expecting value: line 1 column 1 (char 0)
-chile.natural 1383674957 0
-hamidalshaer 337542610 0
-'user'
-francielengulinmakeup 1716708369 0
-uncommon_official 6519404042 0
-'user'
-gtaank 231395698 0
-the.budget.nerd 967064700 0
-'user'
-singhaditi10 38754610602 0
-tastyrabifood 13240246363 0
-lovelyediith 259754338 0
-'user'
-kunzang_chawla 2053812118 0
-evie.et.al 3953094688 0
-'user'
-Users data_pushed  14
+Users data_pushed  23
 25 ids ready to get scraped
-monikasharda_  1000
+pattierneymusic 26132648 0
+shah._palak 5517376460 0
+rose.collection.company 49226825646 0
+ikeausa 306227404 23
+arts_bynandu 54743413142 0
+anjalilovekar 6070768297 0
+azuspeak 991099 0
+elainelim__ 271678201 0
+raghad_abualwan 401134798 0
+wombrat.tribe 39042862964 0
+yeammy_foood 65191292317 0
+ame_surati 45913277106 0
+thecaprigoat 48698707 0
+'user'
+khouloud.mhanna.asmar 342706865 0
+emmy__samtani 1519532675 0
+curious__appetite___  1000
 Expecting value: line 1 column 1 (char 0)
-bombaycallistudio 41588949234 0
-blooms_and_bites 31575246027 0
+zuga_kosaku 3626432874 0
+24dressy 12844080853 6
 'user'
-ladyinembers 47059675054 0
-'user'
-talesofanu_ 55349574018 0
-ruchiawasthii 2532861545 0
-free_gs_fact 34208006479 0
-sacredspacerescue 12339105575 0
-glamwithnikki 4207141872 0
-tanishaaa_666 6994673056 0
-jeffreyygonzalez 276189947 0
-vanityunapologetiq_stylist  1000
+https://www.instagram.com/teacherfinancialplanner/reels/
+https://www.instagram.com/her.personal.finance/reels/
+https://www.instagram.com/_timpaul/reels/
+https://www.instagram.com/cazza_time/reels/
+https://www.instagram.com/gabrielinussbaum/reels/
+https://www.instagram.com/upthegainsmoney/reels/
+https://www.instagram.com/koveproperties/reels/
+https://www.instagram.com/platinumpropertyteam/reels/
+https://www.instagram.com/samuelleeds/reels/
+https://www.instagram.com/abi_hookway/reels/
+https://www.instagram.com/paulsmithwealth/reels/
+https://www.instagram.com/steve_doran/reels/
+https://www.instagram.com/hannahaspinallproperty/reels/  1000
 Expecting value: line 1 column 1 (char 0)
-happiness_is_swag 603432340 0
-travelingxposure 39483429882 0
-diwanpalak 1564585463 0
-memetemplates_mt 33776057458 0
-team.decor2022 52023446171 0
-franciscadennis 331775680 0
+rajaedz 181035666 0
+perfectfit.__ 51555814742 4
 'user'
-mufaris_rashadi 5593149725 0
-doctor_benji 3245859191 0
+gabbs70 656980878 0
+_priya_veigas_ 7183526050 0
+ak.moslehi 4049042768 0
 'user'
-allerganaestheticsanz 7320541875 0
-shelbywinger 178769905 0
-'user'
-divakaran_aravind 27044358300 0
-ishq_h_delhi 62645622164 5
-bksvintagewholesale 37226945311 0
-Users data_pushed  18
-25 ids ready to get scraped
-sonia_sandhu_makeup_artist 2845743049 0
-lasarbeauty 6216278964 0
-infinitymugs 38085461584 0
-irshxdkhan 12102383573 0
-gohin_bruno 8377671789 0
-'user'
-the_designhood 53484399732 0
-fortressbrand 4092391976 0
-'user'
-yuvaana_fashion 49571481469 37
-stuntandsfx.no 3438350621 0
-frommywindowseat 405304332 0
-talha_thakur_official  1000
-Expecting value: line 1 column 1 (char 0)
-thebombaystudio_space 57672723406 0
-clarebaguette 8298622228 0
-'user'
-justcookkit 6833025286 0
-hungerpangs_mumbai  1000
-Expecting value: line 1 column 1 (char 0)
-fairychauhan  1000
-'NoneType' object is not iterable
-thelovedashbartender 5414306205 0
-wavyastrid 49416402269 6
-'user'
-artistrybydamarys 3274893518 0
-'user'
-nextgen_mobiles 22017497625 7
-'user'
-2frostie 1489116888 0
-madmaddieystyle  1000
-Expecting value: line 1 column 1 (char 0)
-alright.bab 5471897895 0
-'user'
-eva_aario  1000
-Expecting value: line 1 column 1 (char 0)
-folklorebooksleeves 41248521676 0
-Users data_pushed  13
-25 ids ready to get scraped
-laxmiaryaofficial 7165010483 0
-ayax1 428408531 0
-kuku__pankti 6151913066 0
-wondertypa 9738030 0
-kaushiikmer 1228006277 0
-getinfluencedwithkunika?igsh=dwuxbmuxcgvtdxe0  1000
-Expecting value: line 1 column 1 (char 0)
-anthonio_marco0007 247604070 0
-oh.lucknow 49976237265 0
-boncat 3782703 0
-harshcreations 56244155755 5
-abigailgingeralephotography 566570180 0
-'user'
-kanithra_krishnan 564731178 1000
-datasciencescoop 22492190217 1000
-babiesvideoo 15128590147 0
-'user'
-alittleextra.co.in 40203078912 1000
-ishita_gomendes  1000
-Expecting value: line 1 column 1 (char 0)
-lifeattheroundhouse 14006822890 0
-'user'
-studiocraft_oficial 3981041503 0
-'user'
-deceramica 2536323461 5
-rendezvous.events 1692311172 0
-sahadev_ch 3302900312 0
-rahilshetty88 2115846706 0
-sakshiiiiiiiiii_trivedii 48398062401 0
-effective_dev 37829775473 11
-'user'
-wild_connection_vet 282100195 0
-Users data_pushed  18
-25 ids ready to get scraped
-organisedbyroo 1513308813 0
-'user'
-woh_makeupwali 3496834899 0
-alankar_1997 5538417416 0
-ppalakkkk 1104155079 0
-ranveer5ingh 209470814 0
-haircaretipps 51771798077 1000
-'user'
-beleafinme_ 43733682549 6
-'user'
-namastefrombharatiya 48068980779 0
-alex.tooth 7275140654 0
-'user'
-jon4s 11824197 0
-tanyabhora 6910824724 0
-_cannotchangeyou_  1000
-Expecting value: line 1 column 1 (char 0)
-blossomroom_mk 13275065671 0
-'user'
-trekker_360 2272392759 0
-seoulceuticals 31597762844 0
-shihab__zichu 1747573858 0
-leluxe.ae 4683424708 0
-khushiisharmag1 33628606516 0
-madeinchiaroscuro 208038571 0
-'user'
-nivah.ind 6017920057 0
-chopravpul 1138826006 0
-maiiirrraaaa 1691918261 0
-afromeals 1529948844 0
-manojit_paul_official 61351364683 0
-bigraynofficials 49087346319 0
-Users data_pushed  18
-25 ids ready to get scraped
-nikitaawasthi_ 879022785 0
-guptastudiojbp 2018654621 0
-mobilebazaarcoimbatore 41892980238 0
-williamhansonetiquette 239633126 6
-remedybeautylounge 250776848 0
-'user'
-revamp_hair_extensions 13040841007 0
-shradzdwivedi 312007808 0
-djtitioficial 1011543996 0
-kajals_couture 1470155192 0
-emilymcguire.co.uk 11789308063 0
-'user'
-ramya_mua 3042926902 1000
-shivashiiiiii 48457843508 0
-rachel.sheerin 426306 0
-crazy_couplet 17139773411 0
-thriftonline.in 56593820209 5
-dallas_asian_foodie 62945848462 0
-sarisafari_sarishop 6110927908 4
-'user'
-saurav_chordia 1774705773 0
-greenbeverages 3977463476 0
-seepreecee 719950739 0
-___a.dx 2230876277 0
-sazzmusic_ 1523763889 0
-scarynature_repost 33298662004 0
-thevanshikaaggarwal 4223529268 0
-jai_ojha13 3507715113 0
-Users data_pushed  22
-25 ids ready to get scraped
-elocalshop 35567643347 0
-plus_size_storee 49562324729 0
-samasays 186962509 0
-tajsafarismeghauliserai 6009060416 0
-'user'
-anusree_sureshh 53839971143 0
-w0nbeen 38585916239 0
-theivyvictoria 17906114855 0
-'user'
-fitnesslovrzz 8301505761 0
-rachel_aran_ 7813225196 0
-pluheph1738 34551589 0
-'user'
-_roshini_10 8540484899 0
-__glamupwitharfa 48007081790 0
-'user'
-betheatsathome 35836040334 0
-rushalichugh  1000
-Expecting value: line 1 column 1 (char 0)
-mahfuza_mi2_ 5452951191 0
-marni_moore_xof 3985500467 0
-'user'
-_forever_find_12 32413306958 0
-rachel_carolina__ 40657817965 0
-yem.yume 18884891968 0
-'user'
-khatti_toffee_ajju_official_ 63957824596 0
-jai_sriram118 62439435440 0
-official_navjotkhalsa 50332343849 0
-offduty.india 7198089572 1000
-mr.kayemba 3158073785 0
-'user'
-insightuk2 31517924086 0
-Users data_pushed  17
-25 ids ready to get scraped
-iviibathroomsensations 5740202112 0
-salman_sk_mim 264250453 0
-blatant.space 54436323989 0
-lullaby_sisters 55291369341 0
-delhi_bloggers 5366078906 1000
-forthehungrysouls 4534100953 0
-myfywish 24286337007 8
-'user'
-vandanasharrma0 7294814670 0
-kccphil 1344420397 0
-punjaban_3132 5533527657 0
-prx1ham 32503851393 0
-juancarloscrazysport 1242074896 0
-'user'
-ladakhtalkies 3925301386 0
-thesheddingcat 13602855216 0
-'user'
-pattuweaverstore 51211829685 0
-_sarhad_9_8  1000
-Expecting value: line 1 column 1 (char 0)
-vernaaho 5118934 0
-makikichi7 1553933361 0
-'user'
-csmriti 389440983 0
-angylenny 27646193 0
-kartartist 2340023232 0
-komalhanss 3556035923 6
-'user'
-mishaelgeorge 381647927 0
-_lifosa 6075648129 0
-paperbackbookstack 51601738326 0
+unleashed_world 1756470913 7
 'user'
 Users data_pushed  18
 25 ids ready to get scraped
-khurana_jo 5804818463 0
-iamshyamkp 3164971147 0
-rasyahrasyid 5998980804 0
-alfahockey 5652896811 0
-michbookstagram 38413323611 0
-ashemamehtta 1602252454 0
-bongfoodcravers 48985340012 0
-dr_sharrvarii 6746603274 0
-mzfkrs 647472721 0
-sri_shaleen 7824913491 5
+swaggytav 281851141 0
+r.17_media 62082801863 0
+coach.paulie_inc 44749798345 0
+ebzyyyyy 8200983615 0
+jessiemiah_mua 3118009902 0
+kerala_jobs_vacancies_ 45497172413 0
+ellamae_christie01 276083479 0
+mindeks 46242119 0
+ranveerallahbadiaa 57194245482 5
 'user'
-foodie_with_friends 36134346287 0
-drjamiem 651275102 0
-melanoma_uk 1524798933 0
+relish_india 5763871033 4
 'user'
-sweetestgoods 25511080143 0
+theparentpedia 1971052840 0
+bethanyblairnwa 538248387 0
+_tanvee_dutta_  1000
+Expecting value: line 1 column 1 (char 0)
+hindushree 3214874155 0
+thelondonveganist 14770526178 4
 'user'
-thedaythatphotography 1752439612 0
-viren_photographs 7634219017 0
-springvivo 261275436 0
-mayankkk_asnaniii 3611187841 0
+creativelyna 33885050502 0
+priprifriess_ 3246393589 0
+winesthesia 5564375850 0
+krishfitness_gym 53614226377 0
+wellnesswithricki 11434979735 0
+thatplacekolkata 61046392998 0
+chrissybrynjolfsson 41082694 0
+sydney.croissant.hunter 6829071246 0
+azzasq 1076082814 0
 'user'
-innocent_boy__jd_001 12742205136 0
-zoravesta 1777899090 0
-inmyowndreams_ 8527530425 0
-nidhirochwani 1352817727 0
-webdesignssphere 66240707324 0
-meetstyle__ 7317555379 1000
-mandalaslovers 8759052345 9
-'user'
+jules.mclellan 3255287127 0
 Users data_pushed  20
 25 ids ready to get scraped
-nrityaholic.neelam 1972956110 0
-its.rutva_ 37690791757 0
-officialnoor5210 61320578814 5
-penofpossibilities 6117599545 0
-foraytravelsg 18990280344 0
-iuilepigments 36565882491 0
+brushinsky 11696687406 6
 'user'
-dr.melinahenderson 230666423 0
-callumcunningham 47660810 0
+gissimonique 43402528792 5
 'user'
-yadav.motorz 64299457014 0
-creativebrand_studio 40644412123 0
-titany_t 1580390970 0
-deepika.yoga 7434262393 0
-divinesaffron 38792919113 0
-apnibaatein 50072941051 0
-wanderlust.co.in 1962154318 0
-kanha_jewellery89 7011633444 1000
-nadesigncouture 52514880019 0
-aroyalaffair.in 7825592026 0
-makeupbysafia 391509884 0
-mdglobalmuscle  1000
+bushra_alhomoud 1357205355 0
+loonyruu 3560746074 0
+taliabinkin_photography 187525169 0
+arpiiita.ghosh 59121997139 0
+lafervance_india 58434152604 0
+bearded__butcher 2346758728 0
+athomewithnikolina 15713120382 0
+ateliersacdenoeuds 65901195638 0
+shariq312 1532122518 0
+jenxcai 1198984690 0
+the.slow.nomads 53645800234 0
+vallerielabel 4743657389 0
+kusummm.12 44445669284 0
+zeinzeidanofficial 12912254020 0
+katiesrising 181231710 0
+rawgymsdublin 1395981446 0
+bloomingbeautiful_withakanksha  1000
 Expecting value: line 1 column 1 (char 0)
-kermit.eldofda 5855453728 0
+morisonsbabydreams 1574456275 6
+letstalkhemp 7107028208 0
+siyoungeats 5706172335 0
+michaelkalisperas 4578468071 0
+yourfavoritefoodguide 64179241350 0
+seriouscricket 510170781 0
+Users data_pushed  22
+25 ids ready to get scraped
+hanbent 427314032 0
 'user'
-becky.dc 224818565 0
-sara_juneja 1530369838 0
-alinnexavierax 6691964396 0
-ourweavershouse 45658813518 1000
+yash_editss 5575903202 0
 'user'
+lavina.h.makhija 579649641 0
+troika_pranichealing 2117407159 6
+'user'
+travelwithindian 57133451549 4
+bryherfood 2321323517 0
+thelumiereco 42512845358 0
+richcraftint 18566758471 0
+youly.com.au 43989631884 0
+fernanda.teixeira1603 2108432206 0
+dressing_styles 2641918844 1000
+'user'
+beautynthebeaches 1150714983 0
+anindita__das 4543725598 0
+katmans_gastropub 7242034885 0
+bei.sydney 1475535070 0
+ashikabothra 5440701552 0
+official_raushan_saw 45331290188 5
+'user'
+reemboww 185744979 0
+nileshpatel2287 192353807 0
+sankar.27 2949551868 0
+universal_design_nid 10197274166 0
+fresh_artisanmarket 4727044480 0
+bellalucidi_beauty 1431670132 0
+xmyfx 3211763 0
+aarthi.ravii 10356432638 0
 Users data_pushed  20
 25 ids ready to get scraped
-edito_hbn 54036060088 0
-himmetpercussion 14113607441 0
-bpi_sports 230557639 1000
+reelystheticc 38348981705 0
+_funky.food_  1000
+Expecting value: line 1 column 1 (char 0)
+f1_tamil_trolls 37244630040 0
+childrenbook_art 4035256485 35
 'user'
-idream_clothing 52680567998 0
-lalumierebyvictoriabakerss 8530347336 0
-tawakkal_studio 37132319601 0
-fady_cinematic 2007055724 0
+reginaldflewisofficial 6229727370 0
+seeza_bhardwaj 1584526104 0
+carolmenndes 269120710 0
+michaelgam.music 251013012 0
+____viaparis 53525549178 0
+rebeccaicke 39242278 0
 'user'
-gaurja.jaipur 59848296882 0
-___n.s.c21 1260481330 0
-muhammadhamzaofficial8 21798704263 0
-toniii__st 1099024487 0
-subculturesound 6270737202 0
-momodamusic 284238810 0
-cjsingh_official 52373957521 0
-supergoodfilms 27026799033 0
-saakshimayank 369642585 0
-ashi_artz_001 35874126205 0
-logosix 8699072539 162
-tamilmemes1.0 3956829777 0
-_a7madd 1387636396 0
+yodha11.in 64424322583 5
 'user'
-marie_b_beauty_ 8028483065 0
-sinan_alhussein 46367550445 0
-camilorate 25490298 0
-__paul.v__ 8606657146 0
-formentierra 38182694961 0
-Users data_pushed  22
+burrawonggaian 1157732280 0
+rrentertainment91 57789377418 1000
+_altruistic_ashu_ 1645914043 0
+drmehakkaur  1000
+Expecting value: line 1 column 1 (char 0)
+immigrantsofamerica 2929564331 0
+pippyandgeorge 44032824066 0
+mompreneursww 1225331595 0
+jackmatusek 2032493561 0
+samantharobbins.co 14521945 0
+tess_jackson 22892601 0
+yasmine.moussous 7286574412 0
+austrobakery 7757951354 0
+kara_speechley 25792652 0
+indigoattic 3160751745 0
+Users data_pushed  20
 25 ids ready to get scraped
-jasiiiiz 8928751674 0
-uma_talks 58353254250 1000
-kvyaafit 34573785081 0
+herewegreauxathome 4151431708 0
 'user'
-procreate.brushset 39936585707 6
+oshe.no 58632000819 0
+inventor_tom 37876491 0
+vortex_print 65305022562 0
+quirkybubba 579152762 0
 'user'
-creatively_danielle 3460470570 0
+lily_purser 21515849 0
+sb_collection48 44835004503 0
+luciennecoaching 11096889209 0
+drallanbacon 51440631530 0
+scarboroughwines 1521507416 0
+liza_borzunova 285089895 0
+southbayaqua 4987390679 0
+burtsbeesnz 2253050704 0
+insta_gourab007 4307485199 0
 'user'
-__nabeela___ 5393476090 0
-restylebysaranya 51676113309 0
-themenakazpage 29304030690 8
-'user'
-trendy_storezz12 66794709969 0
-mantripts_couture 39722785391 0
-https://www.instagram.com/girlchasingwealth/reels/  1000
+imrankhan60786  1000
 Expecting value: line 1 column 1 (char 0)
-sacredtumtacos 13239596981 0
-'user'
-meenu_devrani 43721227951 0
-_travelsavvy_ 4154051432 0
-bluehawks.abroad 59694142237 0
-tuni_tales 1528396834 1000
-alemadi_mohd 229477344 0
-'user'
-tuty_basith_ 41065823826 0
-_tamanna_pal  1000
-Expecting value: line 1 column 1 (char 0)
-herca.meraroll  1000
-Expecting value: line 1 column 1 (char 0)
-sophlbaldwin 17557881 0
-mitishaagarwal 537797848 0
-thebhukkadsworld 7027635899 1000
-_.cakeybakeybhubaneswar._ 39180296639 0
-dr_abdalrhman_abu_azza 5874368835 0
-Users data_pushed  16
-25 ids ready to get scraped
-goldenheartsavioursfoundation 32299503611 0
-jacquelinerose2 27517430 0
-gitanjali_borthakur 2001731175 0
-ash.winrathod 66896791266 0
-kanakk.gupta 6988846908 0
-yogeshwaraya 27271137635 0
-1monsta_boss 50306326007 0
-ishreenk 1479772140 0
-m_j_fashion_influncer 57229405374 7
-ashimasharmaofficial 4234324504 0
-majesticresinofficial 3763851706 4
-'user'
-_coco.caur_  1000
-Expecting value: line 1 column 1 (char 0)
-filmatory.0 59234689943 0
-blogginwithjo 40294471847 0
-pikuattri5 1660151870 0
-im_ovation 67080679741 0
-dinnerdateonme 45235570143 0
-nitikaberry 1124383817 0
-chriswintersnew 2109449506 0
-bhagyashreechamoli 1232083882 0
-style_insideout_bollywood 2033568244 0
-rangreza_life 38592597380 1000
-'user'
-dj_nkd 1295606820 0
-gatherfoodblog 1236925174 0
-oru_nimisham_sir 52164309692 0
-Users data_pushed  22
-25 ids ready to get scraped
-prakriti_gandhi 8320374634 0
-fitcapt1 218590711 0
-through_mariana 48446900541 0
-luisarobledo23 242075250 0
-_s_g______ 9905835521 0
-ctrn_art 10471195107 0
-m.comfortcooks 34605376987 4
-'user'
-helen_nna._ 7875223806 0
-codymartin31 182236012 0
-fang_tokyo_us 65955862275 0
-musingsandcoffee 31845717688 0
-'user'
-travel_foodculture 7114757205 0
-makhat_kz 4676360162 0
-prrasad_mathkkar 642687063 0
-vzion.cc 566452142 0
-kondai_lip_resort 4022681536 0
-myexcelacademy 25607147858 0
-lesrefletsduvent 5327484728 0
-'user'
-embracingthegrey 5624907350 7
-'user'
-ritikakar__ 268490063 0
-kolkata_foodvoyager 38511028054 0
-expansivepalate 44611782169 0
-floral.art._ 50454766678 0
-ca_mohit__ 5471272440 0
-nitharakitchen.cooking 64611539620 0
+sofiadubey 1522921904 0
+australian_tourism_awards 1602109464 0
+babyturbanco 34471720074 0
+misterlynch 301391914 0
+lotussfeet 59619182112 0
+emmajchatfield 36832827146 0
+dougiefresh44 197786462 0
+fonthausen 47376855 0
+benro_worldwide 45248997993 0
+margelous 32119453 0
 Users data_pushed  21
 25 ids ready to get scraped
-hohee01 656851623 0
-fernweh__fly.away.with.me 33994716054 5
+weninmelb 2618745081 0
+mandhs_playcorner 34089653275 0
+studiooneandone 8778143991 0
+rishi_jaggi_nutritionist 1993356995 0
+eatwithkrusam 7937594935 9
 'user'
-nandhu_s_fashion_hut 35206342660 0
-fkhan22 705599895 0
-mesumverma 14182016 0
-krupa_kanna_ 3956203986 0
-mawusiplants 37023218822 0
+bytown.foodie 19580413510 0
 'user'
-ateliermdubai 495284343 0
+farhan_golkar 207921464 0
+thelosthostels 5791156193 6
 'user'
-carlahamadeh 372898035 0
-filipa.vicente 1563310600 0
-eddwi.k 5047077096 0
+grewaa_skincare 50488976805 0
+insta_rati 3245544093 0
+dineshgrao 8225385229 0
+dr_urfan1 57541905327 0
+jokewarehouse 1477323446 0
+town_leixlip 2302652862 0
+philipgruszka 6719680 0
+thustyling 14072983743 1000
 'user'
-amortentiablack 44977986527 0
-liveshelpmedia 12538460 0
+pehu_debosmita 30343635749 0
 'user'
-yogi_kanz 35520314631 0
-gayatri_ram_allam 4028983468 0
-manmarzi007 51220315948 0
-more__idey 1906090587 0
-haediwomen_chemmad 55002667128 0
-dornanscloset 6133526207 0
+majesticresinofficial 3763851706 4
 'user'
-rajanhansora.in 6860752639 0
-payal_patel___143 48253247704 0
+myazilaa 3682633663 0
 'user'
-rradmusic 2804927957 0
+officialdjabee 297564118 0
 'user'
-captu_err0r 5332071513 0
-ez_englishh 44857302518 0
-official.rident_wholesale 60283800451 0
-Users data_pushed  17
+manishdas.music 2310617489 0
+'user'
+japanese_with_jaee 42032548287 0
+'user'
+mikeyquinlivan 417301917 0
+'user'
+harshini_achu06 52378133728 0
+'user'
+jb_swagkidz 31582821343 9
+'user'
+Users data_pushed  12
 25 ids ready to get scraped
-texasmotorcycleclub 48371806902 0
-tastersvibes 39516991128 0
+pattadhari_vivasaayi 49252643504 0
 'user'
-nj_exotic_pets 1420659791 0
-'user'
-aa.kash_49 8387900734 0
-'user'
-alissaofficial_ 437343451 0
-'user'
-_silent_eyes001 4799487684 0
-'user'
-asimarun 5328728342 0
-'user'
-abrunetteinthetropics 7630536290 0
-'user'
-dave_codez 59062965291 0
-'user'
-awasthiswati 1369804232 0
-'user'
-hackerpro_z 33976239126 0
-'user'
-thelonelycardesigner 46499200297 6
-'user'
-Users data_pushed  1
-UserTimeTaken: 107 
-
-
-fatal: destination path 'vhub-scripts' already exists and is not an empty directory.
-imported
-
-fetching ids
-0  ids ready to be scraped
-FollowingTimeTaken: 0 
-
-
-fetching user data
-25 ids ready to get scraped
-prachisamkit 1820687808 0
-'user'
-thememusictamil 55633189920 0
-'user'
-shreya_destination_event 1948943578 0
-'user'
-chetan_agarwalll 5729625213 0
-'user'
-kkraftbuzzindia 2236103885 4
-'user'
-nooriyashamsi 329164412 0
-'user'
-kristal.salt 8695650859 5
-'user'
-chel_levasseur 199014750 0
-'user'
-infiniumdevelopers 60005726405 13
-'user'
-skinny_capp 22293001 0
-'user'
-shoplittlebox_india 52263050612 8
+a_wysocka 1291090507 0
 'user'
 No Data Scraped in this Iteration
+---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+<ipython-input-3-7d1ab6a5ffd0> in <cell line: 45>()
+     46   try:
+     47     from google.colab import output
+---> 48     output.eval_js('new Audio("https://upload.wikimedia.org/wikipedia/commons/0/05/Beep-09.ogg").play()')
+     49   except Exception as e:
+     50     print(f'Error: {e}')
+
+1 frames
+/usr/local/lib/python3.10/dist-packages/google/colab/_message.py in read_reply_from_input(message_id, timeout_sec)
+     94     reply = _read_next_input_message()
+     95     if reply == _NOT_READY or not isinstance(reply, dict):
+---> 96       time.sleep(0.025)
+     97       continue
+     98     if (
+
+KeyboardInterrupt: 

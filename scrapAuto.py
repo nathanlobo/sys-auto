@@ -76,18 +76,23 @@ def getSessionId():
     return sessionID
 
 def pasteSessionIdToCode(sessionID):
-    gui.PAUSE = 1
-    sessionID = f" '{sessionID}'" # Re-formatting session ID
-    gui.hotkey('ctrl', '1') # going to tab 1 on browser
-    gui.moveTo(1355,244, duration=0.5) # moving to scroll bar
-    gui.scroll(5000) # scrolling to the top to paste session id
-    gui.moveTo(208,349, duration=0.5)
-    gui.click(210,349)
-    gui.mouseDown()
-    gui.dragTo(867,349, duration=0.7)
-    gui.mouseUp()
-    clip.copy(sessionID)
-    gui.hotkey('ctrl', 'v')
+    try:
+        sessionID = f"\t\tsession_id = '{sessionID}'\n" # Re-formatting session ID
+        gui.hotkey('ctrl', '1') # going to tab 1 on browser
+        while True:
+            try:
+                gui.click(gui.locateOnScreen('images\session_id.png'),clicks=3)
+                gui.sleep(1)
+                break
+            except gui.ImageNotFoundException:
+                gui.moveTo(1355,228)
+                gui.scroll(50)
+                gui.sleep(1)
+    except gui.ImageNotFoundException:
+        raise gui.ImageNotFoundException
+    finally:
+        clip.copy(sessionID)
+        gui.hotkey('ctrl', 'v')
 
 def getCodeOutput():
     gui.moveTo(1355,244) # move to scroll bar
@@ -153,7 +158,22 @@ def getIgStatus(Timeout):
                     return 'LoggedIn'
     except gui.ImageNotFoundException:
             return 'CouldNotGetStatus: Hint-Increase Timeout'
-        
+
+def getColabStatus(Timeout):
+    try:
+        callTime = time.time()
+        while (callTime-time.time()) <= Timeout:
+            try:
+                if gui.locateOnScreen(r'images\colab_run_btn.png'):
+                    return 'CodeNotRunning'
+            except gui.ImageNotFoundException:
+                if gui.locateOnScreen(r'images\colab_red_run_btn.png'):
+                    return 'CodeCrashed'
+    except gui.ImageNotFoundException:
+            return 'CouldNotGetStatus: Hint-Increase Timeout'
+
+
+
 def instaLogout(Timeout=None):
     gui.hotkey('ctrl', '2')
     try:
@@ -189,11 +209,14 @@ ig_ids_pws= [
             ]
 
 def main():
+    # gui.PAUSE = 0
     goTobrowser()
-    gui.hotkey('ctrl', '2')
+    pasteSessionIdToCode('BlahBlahBlah')
+        
+
     # gui.hotkey('ctrl', 'shift', 'r')
     # gui.hotkey('ctrl', 'r')
-    print(getIgStatus(2))
+    # print(getIgStatus(2))
     # instaLogin(igId,igPw)
     # dismissWarning()
     # sessionID = getSessionId()
