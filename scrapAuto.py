@@ -53,26 +53,29 @@ def clickArea(images, Timeout):
             except gui.ImageNotFoundException:
                 i+=1
 
+def formatTime(timeTaken):
+    h = int(timeTaken // 3600)
+    m = int((timeTaken % 3600) // 60)
+    s = int(timeTaken % 60)
+    return h,m,s
+
 def goTobrowser():
     gui.click(605,745)
     gui.sleep(1)
 
 def getSessionId():
+    global inspectOpened
     gui.PAUSE = 1
     gui.hotkey('ctrl', '2')
-    gui.click(1080,490) # click on screen to unselect all other selections
-    dragSelect(1080,490, 1040,140)
-    gui.hotkey('ctrl', 'c')
-    text = clip.paste()
-    write_text_to_file(text)
-    if checkText('temp.txt', ['shbid', 'csrftoken']) != True:
-        gui.press('f12')
-    gui.sleep(2)
-    gui.click(1066,386) # Click on session id cookie
+    gui.press('f12')
+    inspectOpened = True
+    gui.sleep(5)
+    gui.click(1066,400) # Click on session id cookie
     gui.doubleClick(1105,640) # double click on session id to select it (select all)
     gui.hotkey('ctrl', 'c')
     sessionID = clip.paste()
     print(f"Returning Session ID: {sessionID}")
+    # gui.press('f12')
     return sessionID
 
 def pasteSessionIdToCode(sessionID):
@@ -81,13 +84,11 @@ def pasteSessionIdToCode(sessionID):
         gui.hotkey('ctrl', '1') # going to tab 1 on browser
         while True:
             try:
-                gui.click(gui.locateOnScreen('images\session_id.png'),clicks=3)
-                gui.sleep(1)
+                gui.click(gui.locateOnScreen('images\session_id.png'),clicks=3,interval=.1)
                 break
             except gui.ImageNotFoundException:
                 gui.moveTo(1355,228)
-                gui.scroll(50)
-                gui.sleep(1)
+                gui.scroll(500)
     except gui.ImageNotFoundException:
         raise gui.ImageNotFoundException
     finally:
@@ -129,7 +130,7 @@ def dataPushedCount(file_path='textfile.txt'):
 def instaLogin(igId,igPw,Timeout=None):
         gui.click(110,330)
         images = ['images\ig_user_id_box1.png','images\ig_user_id_box2.png'] # id input box imgs
-        clickArea(images, waitTimeOut=Timeout) # this finds n clicks area that looks like the images given
+        clickArea(images, Timeout=Timeout) # this finds n clicks area that looks like the images given
         gui.hotkey('ctrl', 'a')
         gui.sleep(1)
         gui.write(igId) # type insta user id
@@ -137,7 +138,7 @@ def instaLogin(igId,igPw,Timeout=None):
         gui.click(110,330)
         gui.sleep(1)
         images = ['images\ig_pw_box1.png','images\ig_pw_box2.png'] # Password box imgs
-        clickArea(images, waitTimeOut=Timeout) # this function finds area that look like the images, if found, clicks it
+        clickArea(images, Timeout=Timeout) # this function finds area that look like the images, if found, clicks it
         gui.hotkey('ctrl', 'a')
         gui.sleep(1)
         gui.write(igPw) # type insta user password
@@ -171,8 +172,6 @@ def getColabStatus(Timeout):
                     return 'CodeCrashed'
     except gui.ImageNotFoundException:
             return 'CouldNotGetStatus: Hint-Increase Timeout'
-
-
 
 def instaLogout(Timeout=None):
     gui.hotkey('ctrl', '2')
@@ -209,10 +208,16 @@ ig_ids_pws= [
             ]
 
 def main():
-    # gui.PAUSE = 0
     goTobrowser()
-    pasteSessionIdToCode('BlahBlahBlah')
-        
+    # id = 'nl.ig.work1'
+    # pw = 'nanilobro22'
+    # instaLogin(id, pw, 20)
+    # gui.sleep(5)
+    if 'Loading' in getIgStatus(10):
+        gui.sleep(5)
+    else:
+        session_id = getSessionId()
+        pasteSessionIdToCode(session_id)
 
     # gui.hotkey('ctrl', 'shift', 'r')
     # gui.hotkey('ctrl', 'r')
@@ -257,6 +262,8 @@ def main():
     # else:
     #     print('Unknown Error Occured at Analyze')
     print("\nProgram ended")
+
+inspectOpened = False
 
 if __name__ == "__main__":
     main()
