@@ -39,7 +39,7 @@ def write_text_to_file(text, file_path='temp.txt'):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def clickArea(images, Timeout):
+def clickArea(images,Timeout):
     callTime = time.time()
     while (callTime-time.time()) <= Timeout:
         i=0
@@ -128,37 +128,45 @@ def dataPushedCount(file_path='textfile.txt'):
             return f"File '{file_path}' not found."
 
 def instaLogin(igId,igPw,Timeout=None):
-        gui.click(110,330)
-        images = ['images\ig_user_id_box1.png','images\ig_user_id_box2.png'] # id input box imgs
-        clickArea(images, Timeout=Timeout) # this finds n clicks area that looks like the images given
-        gui.hotkey('ctrl', 'a')
-        gui.sleep(1)
-        gui.write(igId) # type insta user id
-        gui.sleep(1)
-        gui.click(110,330)
-        gui.sleep(1)
-        images = ['images\ig_pw_box1.png','images\ig_pw_box2.png'] # Password box imgs
-        clickArea(images, Timeout=Timeout) # this function finds area that look like the images, if found, clicks it
-        gui.hotkey('ctrl', 'a')
-        gui.sleep(1)
-        gui.write(igPw) # type insta user password
-        gui.press('enter')
+    gui.PAUSE = 1
+    gui.hotkey('ctrl','2')
+    gui.click(110,330)
+    images = ['images\ig_user_id_box1.png','images\ig_user_id_box2.png'] # id input box imgs
+    clickArea(images, Timeout=Timeout) # this finds n clicks area that looks like the images given
+    gui.hotkey('ctrl', 'a')
+    gui.write(igId) # type insta user id
+    gui.click(110,330)
+    images = ['images\ig_pw_box1.png','images\ig_pw_box2.png'] # Password box imgs
+    clickArea(images, Timeout=Timeout) # this function finds area that look like the images, if found, clicks it
+    gui.hotkey('ctrl', 'a')
+    gui.write(igPw) # type insta user password
+    gui.press('enter')
 
-def getIgStatus(Timeout):
+def getIgStatus(Timeout=1):
     # Checks insta status & returns (LoggedIn, LoggedOut, DismissWarning, CaptchaWarning, Loading)
-    try:
-        callTime = time.time()
-        while (callTime-time.time()) <= Timeout:
+    callTime = time.time()
+    while (callTime-time.time()) <= Timeout:
+        try:
+            if gui.locateOnScreen(r'images\ig_logo.png'):
+                return 'Loading'
+        except gui.ImageNotFoundException:
             try:
-                if gui.locateOnScreen(r'images\ig_logo.png'):
-                    return 'Loading'
-            except gui.ImageNotFoundException:
                 if gui.locateOnScreen(r'images\login_btn.png'):
                     return 'LoggedOut'
             except gui.ImageNotFoundException:
-                    return 'LoggedIn'
-    except gui.ImageNotFoundException:
-            return 'CouldNotGetStatus: Hint-Increase Timeout'
+                try:
+                    if gui.locateOnScreen(r'images\insta_word.png'):
+                        return 'LoggedIn'
+                except gui.ImageNotFoundException:
+                    try:
+                        if gui.locateOnScreen(r'images\suspect_auto_warn.png'):
+                            return 'DismissWarning'
+                    except gui.ImageNotFoundException:
+                        try:
+                            if gui.locateOnScreen(r'images\suspect.png'):
+                                return 'DismissWarning'
+                        except gui.ImageNotFoundException:
+                            pass
 
 def getColabStatus(Timeout):
     try:
@@ -182,12 +190,31 @@ def instaLogout(Timeout=None):
         clickArea(['images\ig_more1.png'], Timeout=Timeout)
         gui.moveTo(680,320) # move out of area (at centre) coz holding at same position highlights alt text 
     finally:
-        clickArea(['images\ig_logout_btn.png'], waitTimeOut=(Timeout+5))
+        clickArea(['images\ig_logout_btn.png'], Timeout=(Timeout+5))
 
-def dismissWarning(Timeout=None):
-    clickArea(['images\dismiss_btn.png'], waitTimeOut=Timeout)
+def dismissWarning(Timeout=1):
+    clickArea(['images\dismiss_btn.png'], Timeout=Timeout)
 
-ig_ids_pws= [
+def chk_all_ig_acc():
+    print('inside chk accs function')
+    global ig_ids_pws
+    # if getIgStatus(5) == 'LoggedIn':
+    #     print('ig acc already logged in')
+    #     instaLogout(10)
+    #     gui.sleep(3)
+    for id_pw in ig_ids_pws:
+        print(id_pw)
+        # if getIgStatus(5) == 'LoggedOut':
+        id = id_pw[0]
+        pw = id_pw[1]
+        print(f'ID: {id} Pw: {pw}')
+        instaLogin(id, pw, 20)
+        if getIgStatus() == 'DismissWarning':
+            dismissWarning()
+        gui.sleep(7)
+        instaLogout(10)
+
+ig_ids_pws = [
             ['fast_n_furious.fanpage','nani@lobro22$123456489'],
             ['paulwalker_speed','nanilobro22123456789'],
             ['nl.ig.work1','nanilobro22'],
@@ -208,21 +235,22 @@ ig_ids_pws= [
             ]
 
 def main():
-    goTobrowser()
+    try:
+        goTobrowser()
+        # print(getIgStatus(10))
+        # chk_all_ig_acc()
+    except Exception as e:
+        print(f'Error: {e}')
     # id = 'nl.ig.work1'
     # pw = 'nanilobro22'
     # instaLogin(id, pw, 20)
     # gui.sleep(5)
-    if 'Loading' in getIgStatus(10):
-        gui.sleep(5)
-    else:
-        session_id = getSessionId()
-        pasteSessionIdToCode(session_id)
+    # if 'Loading' in getIgStatus(10):
+    #     gui.sleep(5)
+    # else:
+    #     session_id = getSessionId()
+    #     pasteSessionIdToCode(session_id)
 
-    # gui.hotkey('ctrl', 'shift', 'r')
-    # gui.hotkey('ctrl', 'r')
-    # print(getIgStatus(2))
-    # instaLogin(igId,igPw)
     # dismissWarning()
     # sessionID = getSessionId()
     # pasteSessionIdToCode(sessionID)
@@ -263,7 +291,7 @@ def main():
     #     print('Unknown Error Occured at Analyze')
     print("\nProgram ended")
 
-inspectOpened = False
+# inspectOpened = False
 
 if __name__ == "__main__":
     main()
