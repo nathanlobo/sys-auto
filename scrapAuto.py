@@ -165,8 +165,9 @@ def getBrowserStatus(Timeout=0.1):
     # Checks browser status & returns (Refreshing, NotRefreshing)
     callTime = time.time()
     statuses = [
-                [r'images\stop_refresh_btn.png', 'Refreshing'],
-                [r'images\refresh_btn.png', 'NotRefreshing']
+                [r'images\no_net.png', 'NoNetwork'],
+                [r'images\refresh_btn.png', 'NotRefreshing'],
+                [r'images\stop_refresh_btn.png', 'Refreshing']
                 ]
     while (callTime-time.time()) <= Timeout:
         for status in statuses:
@@ -244,12 +245,10 @@ ig_ids_pws = [
             ]
 
 def main():
-    try:
-        goTobrowser()
-        # print(getIgStatus(10))
-        # chk_all_ig_acc()
-    except Exception as e:
-        print(f'Error: {e}')
+    goTobrowser()
+    # os.startfile(r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe')
+    print(getBrowserStatus(10))
+    # chk_all_ig_acc()
     # id = 'nl.ig.work1'
     # pw = 'nanilobro22'
     # instaLogin(id, pw, 20)
