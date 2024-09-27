@@ -142,7 +142,7 @@ def instaLogin(igId,igPw,Timeout=None):
     gui.write(igPw) # type insta user password
     gui.press('enter')
 
-def getIgStatus(Timeout=1):
+def getIgStatus(Timeout=0.1):
     # Checks insta status & returns (LoggedIn, LoggedOut, DismissWarning, CaptchaWarning, Loading)
     callTime = time.time()
     statuses = [
@@ -151,6 +151,22 @@ def getIgStatus(Timeout=1):
                 [r'images\insta_word.png', 'LoggedIn'],
                 [r'images\suspect_auto_warn.png', 'DismissWarning'],
                 [r'images\suspect.png', 'DismissWarning']
+                ]
+    while (callTime-time.time()) <= Timeout:
+        for status in statuses:
+            try:
+                if gui.locateOnScreen(status[0]):
+                    return status[1]
+            except gui.ImageNotFoundException:
+                pass
+    raise gui.ImageNotFoundException
+
+def getBrowserStatus(Timeout=0.1):
+    # Checks browser status & returns (Refreshing, NotRefreshing)
+    callTime = time.time()
+    statuses = [
+                [r'images\stop_refresh_btn.png', 'Refreshing'],
+                [r'images\refresh_btn.png', 'NotRefreshing']
                 ]
     while (callTime-time.time()) <= Timeout:
         for status in statuses:
