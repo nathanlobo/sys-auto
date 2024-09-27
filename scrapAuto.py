@@ -145,28 +145,20 @@ def instaLogin(igId,igPw,Timeout=None):
 def getIgStatus(Timeout=1):
     # Checks insta status & returns (LoggedIn, LoggedOut, DismissWarning, CaptchaWarning, Loading)
     callTime = time.time()
+    statuses = [
+                [r'images\ig_logo.png', 'Loading'],
+                [r'images\login_btn.png', 'LoggedOut'],
+                [r'images\insta_word.png', 'LoggedIn'],
+                [r'images\suspect_auto_warn.png', 'DismissWarning'],
+                [r'images\suspect.png', 'DismissWarning']
+                ]
     while (callTime-time.time()) <= Timeout:
-        try:
-            if gui.locateOnScreen(r'images\ig_logo.png'):
-                return 'Loading'
-        except gui.ImageNotFoundException:
+        for status in statuses:
             try:
-                if gui.locateOnScreen(r'images\login_btn.png'):
-                    return 'LoggedOut'
+                if gui.locateOnScreen(status[0]):
+                    return status[1]
             except gui.ImageNotFoundException:
-                try:
-                    if gui.locateOnScreen(r'images\insta_word.png'):
-                        return 'LoggedIn'
-                except gui.ImageNotFoundException:
-                    try:
-                        if gui.locateOnScreen(r'images\suspect_auto_warn.png'):
-                            return 'DismissWarning'
-                    except gui.ImageNotFoundException:
-                        try:
-                            if gui.locateOnScreen(r'images\suspect.png'):
-                                return 'DismissWarning'
-                        except gui.ImageNotFoundException:
-                            pass
+                pass
 
 def getColabStatus(Timeout):
     try:
@@ -209,9 +201,9 @@ def chk_all_ig_acc():
         pw = id_pw[1]
         print(f'ID: {id} Pw: {pw}')
         instaLogin(id, pw, 20)
+        gui.sleep(7)
         if getIgStatus() == 'DismissWarning':
             dismissWarning()
-        gui.sleep(7)
         instaLogout(10)
 
 ig_ids_pws = [
