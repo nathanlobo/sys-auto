@@ -159,6 +159,7 @@ def getIgStatus(Timeout=1):
                     return status[1]
             except gui.ImageNotFoundException:
                 pass
+    raise gui.ImageNotFoundException
 
 def getColabStatus(Timeout):
     try:
