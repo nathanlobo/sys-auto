@@ -41,6 +41,10 @@ def write_text_to_file(text, file_path='temp.txt'):
 
 def clickArea(images,Timeout):
     callTime = time.time()
+    try:
+        Timeout = int(Timeout)
+    except ValueError:
+        Timeout = 0.1
     while (callTime-time.time()) <= Timeout:
         i=0
         for image in images:
@@ -144,18 +148,20 @@ def instaLogin(igId,igPw,Timeout=None):
 
 def getIgStatus(Timeout=0.1):
     # Checks insta status & returns (LoggedIn, LoggedOut, DismissWarning, CaptchaWarning, Loading)
+    gui.hotkey('ctrl','2')
     callTime = time.time()
     statuses = [
                 [r'images\ig_logo.png', 'Loading'],
                 [r'images\login_btn.png', 'LoggedOut'],
                 [r'images\insta_word.png', 'LoggedIn'],
+                [r'images\ig_b&w_logo.png', 'LoggedIn'],
                 [r'images\suspect_auto_warn.png', 'DismissWarning'],
                 [r'images\suspect.png', 'DismissWarning']
                 ]
     while (callTime-time.time()) <= Timeout:
         for status in statuses:
             try:
-                if gui.locateOnScreen(status[0]):
+                if gui.locateOnScreen(status[0],confidence=0.8):# use region=(81,123, 135, 50)
                     return status[1]
             except gui.ImageNotFoundException:
                 pass
@@ -172,7 +178,7 @@ def getBrowserStatus(Timeout=0.1):
     while (callTime-time.time()) <= Timeout:
         for status in statuses:
             try:
-                if gui.locateOnScreen(status[0]):
+                if gui.locateOnScreen(status[0], confidence=0.8):
                     return status[1]
             except gui.ImageNotFoundException:
                 pass
@@ -208,21 +214,30 @@ def dismissWarning(Timeout=1):
 def chk_all_ig_acc():
     print('inside chk accs function')
     global ig_ids_pws
-    # if getIgStatus(5) == 'LoggedIn':
+    # if getIgStatus(1) == 'LoggedIn':
     #     print('ig acc already logged in')
     #     instaLogout(10)
-    #     gui.sleep(3)
+    #     while(getBrowserStatus()=='Refreshing')or(getIgStatus()=='Loading')or(getIgStatus()=='LoggedIn'):
+    #         print('waiting')
+    #         gui.sleep(0.1)
     for id_pw in ig_ids_pws:
         print(id_pw)
-        # if getIgStatus(5) == 'LoggedOut':
         id = id_pw[0]
         pw = id_pw[1]
         print(f'ID: {id} Pw: {pw}')
-        instaLogin(id, pw, 20)
-        gui.sleep(7)
+        instaLogin(id, pw, 5)
+        print('logged in')
+        while(getBrowserStatus()=='Refreshing')or(getIgStatus()=='Loading')or(getIgStatus()=='LoggedOut'):
+            print('waiting')
+            gui.sleep(0.1)
+        print('done waiting')
         if getIgStatus() == 'DismissWarning':
+            print('dismissing warning')
             dismissWarning()
         instaLogout(10)
+        while(getBrowserStatus()=='Refreshing')or(getIgStatus()=='Loading')or(getIgStatus()=='LoggedIn'):
+            print('waiting')
+            gui.sleep(0.5)
 
 ig_ids_pws = [
             ['fast_n_furious.fanpage','nani@lobro22$123456489'],
@@ -247,8 +262,9 @@ ig_ids_pws = [
 def main():
     goTobrowser()
     # os.startfile(r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe')
-    print(getBrowserStatus(10))
-    # chk_all_ig_acc()
+    # print(getBrowserStatus(1))
+    # print(getIgStatus(1))
+    chk_all_ig_acc()
     # id = 'nl.ig.work1'
     # pw = 'nanilobro22'
     # instaLogin(id, pw, 20)
@@ -302,7 +318,10 @@ def main():
 # inspectOpened = False
 
 if __name__ == "__main__":
+    start = time.time()
     main()
+    end = time.time()
+    print(f'\nTime Taken by main: {end - start}\n')
 
     import winsound
     frequency = 1000
