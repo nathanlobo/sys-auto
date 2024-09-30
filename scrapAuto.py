@@ -1,8 +1,8 @@
 import pyautogui as gui
 import pyperclip as clip
 import PIL
-import time, os
-from myModule import getScrapCount, analyze, writeToSpreadsheet
+import time, os, random
+from myModule import getScrapCount, writeToSpreadsheet
 
 def dragSelect(startX, startY, endX, endY):
     gui.moveTo(startX, startY,duration=0.5)
@@ -66,6 +66,12 @@ def formatTime(timeTaken):
 def goTobrowser():
     gui.click(605,745)
     gui.sleep(1)
+
+def goToIg():
+    gui.hotkey('ctrl','2')
+
+def goToColab():
+    gui.hotkey('ctrl','1')
 
 def getSessionId():
     global inspectOpened
@@ -210,6 +216,14 @@ def instaLogout(Timeout=None):
 
 def dismissWarning(Timeout=1):
     clickArea(['images\dismiss_btn.png'], Timeout=Timeout)
+    gui.sleep(1)
+
+def captchaWarning():
+    clickArea(['images\ig_captcha_verify.png'])
+    gui.sleep(random.randint(3,7))
+    clickArea([r'images\next.png'])
+    gui.sleep(1)
+
 
 def chk_all_ig_acc():
     print('inside chk accs function')
@@ -227,17 +241,42 @@ def chk_all_ig_acc():
         print(f'ID: {id} Pw: {pw}')
         instaLogin(id, pw, 5)
         print('logged in')
-        while(getBrowserStatus()=='Refreshing')or(getIgStatus()=='Loading')or(getIgStatus()=='LoggedOut'):
-            print('waiting')
-            gui.sleep(0.1)
+        waitFor('LoggedIn') # Verify if LoggedIn
         print('done waiting')
         if getIgStatus() == 'DismissWarning':
             print('dismissing warning')
             dismissWarning()
         instaLogout(10)
-        while(getBrowserStatus()=='Refreshing')or(getIgStatus()=='Loading')or(getIgStatus()=='LoggedIn'):
-            print('waiting')
-            gui.sleep(0.5)
+        waitFor('LoggedIn')
+
+def chknTackleWarnings():
+    igStatus = getIgStatus(5)
+    if igStatus == 'DismissWarning':
+        dismissWarning()
+    # if igStatus == 'CaptchaWarning':
+    #     captchaWarning()
+    # if igStatus == 'OTP-Verify':
+    #     pass
+
+def waitFor(status,Timeout=120):
+    if status == 'LoggedIn':
+        status = 'LoggedOut'
+    elif status == 'LoggedOut':
+        status = 'LoggedIn'
+    callTime = time.time()
+    while(getBrowserStatus()=='Refreshing')or(igStatus=='Loading')or(igStatus==status):
+        print('waiting')
+        gui.sleep(0.5)
+        if (time.time())-callTime > Timeout:
+            gui.hotkey('ctrl','r')
+
+def beepAlarm(count=1, interval=1, nonStop=False):
+    for _ in range(count):
+        import winsound
+        frequency = 1000
+        duration = 1500
+        winsound.Beep(frequency, duration)
+        time.sleep(interval)
 
 ig_ids_pws = [
             ['fast_n_furious.fanpage','nani@lobro22$123456489'],
@@ -262,69 +301,46 @@ ig_ids_pws = [
 def main():
     goTobrowser()
     # os.startfile(r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe')
-    # print(getBrowserStatus(1))
-    # print(getIgStatus(1))
-    chk_all_ig_acc()
-    # id = 'nl.ig.work1'
-    # pw = 'nanilobro22'
-    # instaLogin(id, pw, 20)
-    # gui.sleep(5)
-    # if 'Loading' in getIgStatus(10):
-    #     gui.sleep(5)
-    # else:
-    #     session_id = getSessionId()
-    #     pasteSessionIdToCode(session_id)
-
-    # dismissWarning()
-    # sessionID = getSessionId()
-    # pasteSessionIdToCode(sessionID)
-    # gui.hotkey('ctrl', 'enter')
-    # codeOutput = getCodeOutput()
-    # write_text_to_file(codeOutput)
-    # analysis = a.analyze('temp.txt')
-    # if analysis == 'ErrorXCodeCompleted':
-    #     print('printed from if')
-        # userCount = getScrapCount()[0]
-        # profileCount = getScrapCount()[1]
-        # print(f'{userCount}, {profileCount}')
-        # if userCount != 'TextNotFound' and userCount != 'FileNotFound':
-        #     userCount = userCount.split('+')
-        #     tempVal = 0
-        #     for count in userCount:
-        #         tempVal+=int(count)
-        #     userCount = tempVal
-        # else:
-        #     print('User Scrap Count Not Found')
-        # if profileCount != 'TextNotFound' and profileCount != 'FileNotFound':
-        #     profileCount = profileCount.split('+')
-        #     tempVal = 0
-        #     for count in profileCount:
-        #         tempVal+=int(count)
-        #     profileCount = tempVal
-        # else:
-        #     print('Profile Scrap Count Not Found')
-        # print(f'{userCount}, {profileCount}')
-        # writeToSpreadsheet(userCount, profileCount)
-    # elif analysis == 'ErrorXCodeActiveORCrashed':
-    # if gui.locateOnScreen('images\colab_run_btn.png'):
-    #     print('Run button exist')
-    # use gui image location to check if code stop running scroll to top check if run btn avaible or not then further decide0
-    #     print('printed from elif')
-    
-    # else:
-    #     print('Unknown Error Occured at Analyze')
+    for id_pw in ig_ids_pws:
+        id = id_pw[0]
+        pw = id_pw[1]
+        instaLogin(id,pw)
+        waitFor('LoggedIn')
+        chknTackleWarnings()
+        waitFor('LoggedIn')
+        session_id = getSessionId()
+        pasteSessionIdToCode(session_id)
+        gui.hotkey('ctrl','enter')
+        i=0
+        while getColabStatus() == 'CodeRunning':
+            if i<=3:
+                delay = 10
+                i+=1
+            else:
+                delay = 150
+            gui.sleep(delay)
+            goToIg()
+            gui.hotkey('ctrl','r')
+            waitFor('LoggedIn',Timeout=5)
+            chknTackleWarnings()
+            goToColab()
+        if getColabStatus()=='CodeCrashed': #Check for red btn
+            beepAlarm(nonStop=True)
+        if getColabStatus()=='CodeCompleted':
+            # **** getColabOutput FUNCTION NOT YET Created**** 
+            colabCodeOutput = getColabOutput()
+            write_text_to_file(colabCodeOutput)
+            total_userdata = getScrapCount()
+            total_profiles = getScrapCount()
     print("\nProgram ended")
 
 # inspectOpened = False
 
 if __name__ == "__main__":
     start = time.time()
-    main()
+    # main() # main not ready to run
     end = time.time()
     print(f'\nTime Taken by main: {end - start}\n')
 
-    import winsound
-    frequency = 1000
-    duration = 1500
-    winsound.Beep(frequency, duration)
+    beepAlarm(3)
     pass
