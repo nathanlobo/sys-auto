@@ -106,14 +106,23 @@ def pasteSessionIdToCode(sessionID):
         gui.hotkey('ctrl', 'v')
 
 def getCodeOutput():
-    gui.moveTo(1355,244) # move to scroll bar
-    gui.scroll(5000)
-    gui.scroll(-600)
-    gui.click(1260,390) # click on code area
-    gui.hotkey('ctrl','a')
-    gui.hotkey('ctrl','c')
-    codeOutput = clip.paste()
-    return codeOutput
+    gui.moveTo(1355,244) # move to scroll bar # new: moveto run btn and try scrolling
+    gui.scroll(10000) # scroll up
+    while True:
+    # for _ in range(10):
+        try:
+            x, y = gui.center(gui.locateOnScreen('images\colab_outp_option_btn.png'))#if slow use confidence=0.8
+            # random used below to not be caught as Bot at captcha 
+            gui.click(x + (random.uniform(30,150)), y + (random.uniform(-8,6)))
+            # gui.sleep(random.uniform(0.1,1.0))# not to be detected as Bot
+            gui.hotkey('ctrl','a')
+            gui.hotkey('ctrl','c')
+            codeOutput = clip.paste()
+            return codeOutput
+        except gui.ImageNotFoundException:
+            gui.scroll(-500) # scroll down
+            gui.sleep(1)
+    
 
 def dataPushedCount(file_path='textfile.txt'):
     search_texts = ['Users data_pushed', 'profiles_pushed']
@@ -138,7 +147,7 @@ def dataPushedCount(file_path='textfile.txt'):
             return f"File '{file_path}' not found."
 
 def instaLogin(igId,igPw,Timeout=None):
-    gui.PAUSE = 1
+    gui.PAUSE = 0.2
     gui.hotkey('ctrl','2')
     gui.click(110,330)
     images = ['images\ig_user_id_box1.png','images\ig_user_id_box2.png'] # id input box imgs
@@ -224,7 +233,6 @@ def captchaWarning():
     clickArea([r'images\next.png'])
     gui.sleep(1)
 
-
 def chk_all_ig_acc():
     print('inside chk accs function')
     global ig_ids_pws
@@ -247,7 +255,7 @@ def chk_all_ig_acc():
             print('dismissing warning')
             dismissWarning()
         instaLogout(10)
-        waitFor('LoggedIn')
+        waitFor('LoggedOut')
 
 def chknTackleWarnings():
     igStatus = getIgStatus(5)
@@ -263,8 +271,10 @@ def waitFor(status,Timeout=120):
         status = 'LoggedOut'
     elif status == 'LoggedOut':
         status = 'LoggedIn'
+    igStatus = getIgStatus()
     callTime = time.time()
-    while(getBrowserStatus()=='Refreshing')or(igStatus=='Loading')or(igStatus==status):
+    while(getBrowserStatus()=='Refreshing')or((igStatus)=='Loading')or(igStatus==status):
+        igStatus = getIgStatus()
         print('waiting')
         gui.sleep(0.5)
         if (time.time())-callTime > Timeout:
@@ -277,6 +287,18 @@ def beepAlarm(count=1, interval=1, nonStop=False):
         duration = 1500
         winsound.Beep(frequency, duration)
         time.sleep(interval)
+
+def rptScrapAcc(id,pw):
+    while True:
+        print(f'ID: {id} Pw: {pw}')
+        instaLogin(id, pw, 5)
+        waitFor('LoggedIn') # Verify if LoggedIn
+        print('logged in')
+        if getIgStatus() == 'DismissWarning':
+            print('dismissing warning')
+            dismissWarning()
+        # instaLogout(10)
+        # waitFor('LoggedOut')
 
 ig_ids_pws = [
             ['fast_n_furious.fanpage','nani@lobro22$123456489'],
@@ -337,10 +359,12 @@ def main():
 # inspectOpened = False
 
 if __name__ == "__main__":
+    goTobrowser()
     start = time.time()
     # main() # main not ready to run
+    # chk_all_ig_acc()
+    print(getCodeOutput())
     end = time.time()
     print(f'\nTime Taken by main: {end - start}\n')
-
-    beepAlarm(3)
+    beepAlarm(1)
     pass
